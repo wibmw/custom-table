@@ -1,0 +1,150 @@
+/****************** Table Content ************************/
+.tableWrapper {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: max-content;
+}
+
+.textRight {
+  text-align: right;
+  padding: 5px;
+}
+
+.textLeft {
+  text-align: left;
+  padding: 5px;
+}
+
+.table-content {
+  max-width: 90%;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: $secondary-color;
+
+  & h1 {
+    margin: 0;
+  }
+
+  & .filter {
+    font-weight: bolder;
+    padding: 10px;
+    text-align: initial;
+    & input {
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  & thead {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    & th {
+      padding: 10px;
+      font-weight: bold;
+      &.up {
+        background-image: url('../assets/images/up_arrow.png');
+      }
+      &.down {
+        background-image: url('../assets/images/down_arrow.png');
+      }
+      &.default {
+        background-image: url('../assets/images/default.png');
+      }
+      &.up,
+      &.default,
+      &.down {
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center right;
+        padding-right: 20px;
+      }
+    }
+  }
+  & tbody {
+    & tr {
+      border-bottom: 2px solid #ccc;
+
+      &:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      &:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+/* ********************* FOOTER ************************* */
+.tableFooter {
+  background-color: #f1f1f1;
+  padding: 15px 10px;
+  color: #2c3e50;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: sticky;
+  left: 0;
+  right: 0;
+
+  & .pageNumber {
+    font-weight: 400;
+  }
+  & .buttons {
+    & .button {
+      border: none;
+      padding: 7px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-right: 4px;
+      margin-left: 4px;
+    }
+
+    & .activeButton {
+      color: white;
+      background: #7c996e;
+      font-weight: bold;
+    }
+
+    & .inactiveButton {
+      color: #2c3e50;
+      background: #d8d8d8;
+    }
+  }
+  & .rangeSelect {
+    & select {
+      padding: 3px;
+      font-size: 15px;
+    }
+  }
+}
+
+/****************** Media Query ************************/
+@media (max-width: 720px) {
+  .tableFooter {
+    width: max-content;
+  }
+}
+@media (max-width: 450px) {
+.table-content {
+  padding: 1rem;
+  & h1 {
+    font-size: 18px;
+  }
+  & .filter {
+    font-size: 14px;
+    & input{
+      width:70%;
+    }
+  }
+}
+}

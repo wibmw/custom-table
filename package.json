@@ -1,0 +1,74 @@
+{
+  "name": "@wibmw/custom-table",
+  "version": "0.0.1",
+  "description": "Table component with integrated filter search, column sort and pagination.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wibmw/custom-table.git"
+  },
+  "keywords": [
+    "table",
+    "custom",
+    "data",
+    "filter",
+    "search",
+    "pagination",
+    "react",
+    "typescript",
+    "awesome",
+    "best",
+    "fast",
+    "lite",
+    "simple",
+    "easy"
+  ],
+  "author": "WIBMW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wibmw/custom-table/issues"
+  },
+  "homepage": "https://github.com/wibmw/custom-table#readme",
+  "devDependencies": {
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.2.5",
+    "@types/react": "^18.0.26",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.3.1",
+    "jest-canvas-mock": "^2.4.0",
+    "jest-environment-jsdom": "^29.3.1",
+    "prettier": "^2.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "/typings",
+    "LICENSE",
+    "README.md"
+  ],
+  "directories": {
+    "test": "tests"
+  }
+}
