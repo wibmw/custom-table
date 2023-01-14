@@ -57,6 +57,7 @@ const isNullValue = (a: ITableDatas, b: ITableDatas, sortedField: string) => {
   if (a[sortedField] === null) return 1
   if (b[sortedField] === null) return -1
   if (a[sortedField] === null && b[sortedField] === null) return 0
+  else return 0
 }
 // Sort Datas by Order
 const sortByOrder = (a: ITableDatas, b: ITableDatas, sortedField: string, sortOrder: string) => {
