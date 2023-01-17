@@ -1,15 +1,13 @@
 {
   "name": "@wibmw/custom-table",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Table component with integrated filter search, column sort and pagination.",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build": "yarn tsc",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\""
   },
@@ -64,11 +62,12 @@
   },
   "files": [
     "dist",
-    "/typings",
+    "types",
     "LICENSE",
     "README.md"
   ],
   "directories": {
     "test": "tests"
-  }
+  },
+  "dependencies": {}
 }
